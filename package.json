@@ -1,0 +1,18 @@
+{
+  "name": "form-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild assets/js/main.js --bundle --outfile=assets/js/bundle.js --format=esm --minify --sourcemap",
+    "build:dev": "esbuild assets/js/main.js --bundle --outfile=assets/js/bundle.js --format=esm"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "esbuild": "^0.25.1"
+  }
+}
