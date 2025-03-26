@@ -2,6 +2,14 @@
 
 All notable changes to the Form Project will be documented in this file.
 
+## [1.0.2] - 2025-03-26
+
+### Added
+
+- UTM parameter extraction functionality for marketing campaign tracking
+- Automatic detection and capture of all UTM parameters (source, medium, campaign, etc.)
+- Hidden form fields to include UTM parameters in form submissions
+
 ## [1.0.1] - 2025-03-26
 
 ### Fixed
