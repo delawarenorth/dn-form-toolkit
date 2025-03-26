@@ -4,7 +4,7 @@
  */
 
 // Import UI components for displaying validation errors
-import { showModal } from './ui.js';
+import { showModal } from "./ui.js";
 
 // ZIP/Postal Code Validator Class
 export class ZipCodeValidator {
@@ -112,26 +112,26 @@ export class ZipCodeValidator {
 export async function validateZipCode(zipCodeField) {
   const zipValidator = new ZipCodeValidator();
   const validationResult = await zipValidator.validate(zipCodeField.value);
-  
+
   if (!validationResult.valid) {
     showModal("Validation Error", validationResult.error);
     return false;
   }
-  
+
   return true;
 }
 
 // Export a function to validate all form fields
 export async function validateAllFields(form) {
-  // Get zip code field
-  const zipCodeField = form.querySelector('[name="zipcode"]');
-  
+  // Get zip code field - check for different naming variations
+  const zipCodeField = form.querySelector('[name="zipcode"], [name="postal code"], [name="zip code"]');
+
   if (zipCodeField) {
     const isZipValid = await validateZipCode(zipCodeField);
     if (!isZipValid) return false;
   }
-  
+
   // Add more field validations as needed
-  
+
   return true;
 }

@@ -2,6 +2,13 @@
 
 All notable changes to the Form Project will be documented in this file.
 
+## [1.0.3] - 2025-03-26
+
+### Changed
+
+- Enhanced zip code field detection to support multiple naming variations ("zipcode", "postal code", "zip code")
+- Improved code formatting consistency
+
 ## [1.0.2] - 2025-03-26
 
 ### Added
