@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "esbuild assets/js/main.js --bundle --outfile=assets/js/bundle.js --format=esm --minify --sourcemap",
+    "build": "node esbuild.config.js",
     "build:dev": "esbuild assets/js/main.js --bundle --outfile=assets/js/bundle.js --format=esm"
   },
   "keywords": [],
