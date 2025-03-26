@@ -2,6 +2,25 @@
 
 All notable changes to the Form Project will be documented in this file.
 
+## [1.0.1] - 2025-03-26
+
+### Fixed
+- Implemented proper template literal minification in the bundle
+- Created custom esbuild plugin to specifically target and minify template literals
+
+### Changed
+- Replaced command-line esbuild configuration with a JavaScript configuration file
+- Updated build process to use a custom esbuild.config.js file
+- Improved bundle size by removing unnecessary whitespace in template literals
+
+### Technical Details
+- Created custom esbuild plugin that uses regex to find and minify template literals
+- Plugin applies specific transformations to template literal content:
+  - Removes excessive whitespace
+  - Removes whitespace between HTML tags
+  - Trims leading and trailing whitespace
+- Build script in package.json now uses `node esbuild.config.js` instead of direct esbuild CLI
+
 ## [1.0.0] - 2025-03-25
 
 ### Added
