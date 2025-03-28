@@ -35,8 +35,7 @@ esbuild.config.js
 Add these lines in your website's `<head>` or before the closing `</body>` tag:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/{GITHUB_USERNAME}/{REPO_NAME}/assets/css/style.css" />
-<script src="https://cdn.jsdelivr.net/gh/{GITHUB_USERNAME}/{REPO_NAME}/assets/js/bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/delawarenorth/dn-form-toolkit@latest/assets/js/bundle.js"></script>
 ```
 
 _Replace `{GITHUB_USERNAME}` and `{REPO_NAME}` with your GitHub username and repository name._
