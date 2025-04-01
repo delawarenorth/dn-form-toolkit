@@ -18,7 +18,15 @@ export function initTurnstile() {
       // Create Turnstile element
       const turnstileHTML = document.createElement("div");
       turnstileHTML.className = "cf-turnstile";
-      turnstileHTML.setAttribute("data-sitekey", "0x4AAAAAAA7xhXywyI0cvp43");
+      
+      // Get site key from script tag or container, fall back to default if not provided
+      const scriptTag = document.querySelector('script[data-turnstile-key]');
+      const container = document.querySelector('[data-turnstile-key]');
+      const siteKey = (scriptTag?.getAttribute('data-turnstile-key') || 
+                       container?.getAttribute('data-turnstile-key') || 
+                       "0x4AAAAAAAz294HADqzABjCG");
+      
+      turnstileHTML.setAttribute("data-sitekey", siteKey);
 
       // Insert before submit button
       submitButton.parentNode.insertBefore(turnstileHTML, submitButton);
