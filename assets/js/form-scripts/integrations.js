@@ -18,7 +18,7 @@ export function initTurnstile() {
       // Create Turnstile element
       const turnstileHTML = document.createElement("div");
       turnstileHTML.className = "cf-turnstile";
-      turnstileHTML.setAttribute("data-sitekey", "0x4AAAAAAA7xhXywyI0cvp43");
+      turnstileHTML.setAttribute("data-sitekey", "0x4AAAAAAAz294HADqzABjCG");
 
       // Insert before submit button
       submitButton.parentNode.insertBefore(turnstileHTML, submitButton);
