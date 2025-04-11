@@ -9,7 +9,7 @@ export function initTurnstile() {
 
   if (form) {
     // Set the form action to the Turnstile handler
-    form.action = "https://turnstile-handler.digitalmarketing-213.workers.dev";
+    form.action = "https://turnstile-handler-parks.digitalmarketing-213.workers.dev";
 
     // Find the submit button
     const submitButton = form.querySelector('button[type="submit"]');
