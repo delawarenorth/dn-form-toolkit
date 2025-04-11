@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "node esbuild.config.js",
-    "build:dev": "esbuild assets/js/main.js --bundle --outfile=assets/js/bundle.js --format=esm"
+    "build:dev": "esbuild assets/js/main.js --bundle --outfile=assets/js/bundle.js --format=esm",
+    "build:parks": "esbuild assets/js/main.js --bundle --outfile=assets/js/parks-bundle.js --format=esm"
   },
   "keywords": [],
   "author": "",

@@ -9,7 +9,7 @@ export function initTurnstile() {
 
   if (form) {
     // Set the form action to the Turnstile handler
-    form.action = "https://turnstile-handler-parks.digitalmarketing-213.workers.dev";
+    form.action = "https://turnstile-handler.digitalmarketing-213.workers.dev";
 
     // Find the submit button
     const submitButton = form.querySelector('button[type="submit"]');
@@ -18,7 +18,15 @@ export function initTurnstile() {
       // Create Turnstile element
       const turnstileHTML = document.createElement("div");
       turnstileHTML.className = "cf-turnstile";
-      turnstileHTML.setAttribute("data-sitekey", "0x4AAAAAAAz294HADqzABjCG");
+      
+      // Get site key from script tag or container, fall back to default if not provided
+      const scriptTag = document.querySelector('script[data-turnstile-key]');
+      const container = document.querySelector('[data-turnstile-key]');
+      const siteKey = (scriptTag?.getAttribute('data-turnstile-key') || 
+                       container?.getAttribute('data-turnstile-key') || 
+                       "0x4AAAAAAAz294HADqzABjCG");
+      
+      turnstileHTML.setAttribute("data-sitekey", siteKey);
 
       // Insert before submit button
       submitButton.parentNode.insertBefore(turnstileHTML, submitButton);
