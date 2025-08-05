@@ -15,5 +15,8 @@
   "type": "module",
   "devDependencies": {
     "esbuild": "^0.25.1"
+  },
+  "dependencies": {
+    "playwright": "^1.54.2"
   }
 }
