@@ -11,6 +11,13 @@ export function initTurnstile() {
     // Set the form action to the Turnstile handler
     form.action = "https://universal-form-handler.digitalmarketing-213.workers.dev";
 
+    // Add original domain as hidden field for worker authorization
+    const originalDomainInput = document.createElement("input");
+    originalDomainInput.type = "hidden";
+    originalDomainInput.name = "original_domain";
+    originalDomainInput.value = window.location.hostname;
+    form.appendChild(originalDomainInput);
+
     // Find the submit button
     const submitButton = form.querySelector('button[type="submit"]');
 
